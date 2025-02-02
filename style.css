@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+body{
+    padding: 0;
+}
+.big {
+    margin-left: 1em;
+    width: 40em;
+    height: 60vh;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+.card-group {
+    display: flex;
+    gap: 1em;
+}
+.card {
+    width: 225px;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card .layer {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.card .info {
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+}
+.info p {
+    font-size: 14px;
+    margin-top: 3px;
+}
+.info button {
+    background: #00d084;
+    border: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.info button :hover{
+    background-color: #cac2b8;
+    transform: scale(1.05);
+}
+.card:hover,
+.card:hover img,
+.card:hover layer {
+    transform: scale(1.1);
+}
+.card:hover > .layer {
+    opacity: 1;
+}
+.card:hover > .info {
+    bottom: 0;
+    opacity: 1;
+}
+.card-group:hover > .card:not(:hover) {
+    filter: blur(5px);
+}
+
+/*Page de sommaire*/
+.logo{
+    width: 8%;
+    height: 100%;
+}
+header{
+    background-color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    height: 5em;
+}
+body a {
+    color: #3f474e;
+    text-decoration: none;
+}
+header ul a:hover{
+    color: #007bff;
+}
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0green, 0blue, 0.3alpha);
+}
+p{
+    text-align: justify;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2.5em;
+    margin-top: 2em;
+    margin-left: 10rem;
+}
+main{
+    background: linear-gradient(to right, #005bea, #00c6fb);
+    font-size: 20px;
+    height: 80%;
+    justify-content: center;
+}
+footer{
+    width: 100%;
+    background-color: #333;
+    color: #ffffff;
+    height: 10%;padding: 20px 10px;
+    border-top: 2px solid #007bff;
+    font-size: 14px;
+}
+footer p {
+    text-align: center;
+}
